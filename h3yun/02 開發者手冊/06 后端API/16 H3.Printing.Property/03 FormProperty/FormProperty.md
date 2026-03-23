@@ -1,0 +1,39 @@
+---
+title: "FormProperty"
+source: "https://help.h3yun.com/contents/521/418.html"
+category: "開發者手冊 / 后端API / H3.Printing.Property / FormProperty"
+updated: 2025-12-22
+tags:
+  - h3yun
+  - 開發者手冊
+---
+类名 : FormProperty
+说明 : 表单字段属性 
+构造方法名称 : #ctor
+
+| 参数 | 说明 |
+| --- | --- |
+| |
+ |
+| 返回值 |  |
+| |  |
+
+
+构造方法名称 : #ctor(System.Xml.XmlElement)
+
+| 参数 | 说明 |
+| --- | --- |
+| "xmlElement" | |
+| 返回值 |  |
+| |  |
+
+
+方法名称 : SaveAsXml(System.Xml.XmlDocument,System.Xml.XmlElement)
+
+| 参数 | 说明 |
+| --- | --- |
+| "xmlDocument" | |
+| "xmlElement" | |
+| 返回值 |  |
+| |
+ |

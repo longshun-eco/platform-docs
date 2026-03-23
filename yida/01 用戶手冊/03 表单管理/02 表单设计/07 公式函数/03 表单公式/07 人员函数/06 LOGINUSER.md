@@ -1,0 +1,39 @@
+---
+title: "LOGINUSER"
+source: "https://docs.aliwork.com/docs/yida_support/wtwabe/cnzrgo/gvtpe4/namr73vcz90gduud/iak2o5xcbksb13wz"
+category: "用戶手冊 / 表单管理 / 表单设计 / 公式函数 / 表单公式 / 人員函數"
+updated: 
+tags:
+  - yida
+  - 用戶手冊
+---
+
+LOGINUSER 函数用于获取当前登录成员在当前组织的姓名。
+
+## 支持产品场景
+
+LOGINUSER 函数支持在宜搭的以下场景中使用。
+
+- 表单（主表字段）
+- 表单（业务关联规则）
+- 表单（校验）
+- 流程设计（校验规则）
+- 流程设计（关联操作）
+
+## 格式
+
+```
+LOGINUSER()
+```
+
+## 返回值
+
+| **返回值类型** | **说明** |
+| --- | --- |
+| 文本 | 返回的当前登录员工的姓名。 |
+
+## 使用示例
+
+如下图所示，使用 `LOGINUSER()` 函数获取当前登录员工的姓名。
+
+![[yida_support-wtwabe-cnzrgo-gvtpe4-namr73vcz90gduud-iak2o5xcbksb13wz_1704447832110-a43be799-a436-4005-aafa-7e34a56370bc.gif]]

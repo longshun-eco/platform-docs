@@ -1,0 +1,52 @@
+---
+title: "DAYBEGIN"
+source: "https://docs.aliwork.com/docs/yida_support/wtwabe/cnzrgo/gvtpe4/dh7m8n/kuda7hpn6ru4mv2g"
+category: "用戶手冊 / 表单管理 / 表单设计 / 公式函数 / 表单公式 / 时间函数"
+updated: 
+tags:
+  - yida
+  - 用戶手冊
+---
+
+DAYBEGIN函数用于将指定日期的时分秒设置为零，即`00:00:00`。
+
+## 支持产品场景
+
+DAYBEGIN函数支持在宜搭的以下场景中使用。
+
+-   表单（主表字段）
+-   表单（业务关联规则）
+-   表单（校验）
+-   流程设计（校验规则）
+-   流程设计（关联操作）
+-   集成自动化
+-   流程-节点
+-   连接器
+
+## 格式
+
+```
+DAYBEGIN(timestamp)
+```
+
+## 属性说明
+
+| **属性** | **是否必填** | **说明** |
+| --- | --- | --- |
+| timestamp | 是 | 需要置零的日期的时间戳，可以直接使用日期组件。 |
+
+## 返回值
+
+| **返回值类型** | **说明** |
+| --- | --- |
+| timestamp | 置零后的日期时间戳，可以直接赋值给日期组件。 |
+
+## 使用示例
+
+如下图所示，你可以使用`DAYBEGIN()`函数将指定日期的时分秒设置为`00:00:00`。
+
+![[yida_support-wtwabe-cnzrgo-gvtpe4-dh7m8n-kuda7hpn6ru4mv2g_1703213996024-9e7450c5-33ba-4d2f-9594-9701b2a9f3a9.png]]
+
+## 体验
+
+将指定日期组件的时间戳的时分秒置零后的时间戳结果，[点击体验效果](https://www.aliwork.com/o/qwqwzz?ddtab=true)。

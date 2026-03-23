@@ -1,0 +1,68 @@
+---
+title: "Link 链接"
+source: "https://docs.aliwork.com/docs/developer/components/basic/link"
+category: "開發者手冊 / 组件 / 基础组件"
+updated: 
+tags:
+  - yida
+  - 開發者手冊
+---
+跳转超链接，用于跳转到新页面。
+
+## 何时使用
+
+-   切换访问当前应用的其他页面；
+-   跳转到外部页面。
+
+## 组件示例
+
+## 组件属性
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+|
+content
+
+ | 置链接文本内容 | string | '这里是一个链接' |
+|
+
+isBlank
+
+ | 是否新开页面 | boolean | false |
+|
+
+page
+
+ | 内部页面Uuid，当 **type** 属性为page时生效 | string |
+
+\-
+
+ |
+|
+
+params
+
+ | url 查询参数，多用于页面跳转传参 | Record<string, string> |
+
+\-
+
+ |
+|
+
+textOverflow
+
+ | 文本单行截断，文字超过一行是否使用...显示，开启此项后，同时会设置html标签的title属性 | boolean | false |
+|
+
+type
+
+ | 链接类型，page：内部页面、url：外部链接 | 'page' | 'url' | 'page' |
+|
+
+url
+
+ | 链接地址，点击链接即可跳转对应页面，当 **type** 属性为url时生效 | string |
+
+\-
+
+ |

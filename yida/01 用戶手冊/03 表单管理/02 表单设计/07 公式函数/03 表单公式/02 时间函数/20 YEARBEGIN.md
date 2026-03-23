@@ -1,0 +1,52 @@
+---
+title: "YEARBEGIN"
+source: "https://docs.aliwork.com/docs/yida_support/wtwabe/cnzrgo/gvtpe4/dh7m8n/whagovdhgkyy0n4k"
+category: "用戶手冊 / 表单管理 / 表单设计 / 公式函数 / 表单公式 / 时间函数"
+updated: 
+tags:
+  - yida
+  - 用戶手冊
+---
+
+**YEARBEGIN**函数用于将指定日期设置为该日期所在年份的开始时间，即：`xxxx-01-01 00:00:00`。
+
+## 支持产品场景
+
+YEARBEGIN函数支持在宜搭的以下场景中使用。
+
+-   表单（主表字段）
+-   表单（业务关联规则）
+-   表单（校验）
+-   流程设计（校验规则）
+-   流程设计（关联操作）
+-   集成自动化
+-   流程-节点
+-   连接器
+
+## 格式
+
+```
+YEARBEGIN(timestamp)
+```
+
+## 属性说明
+
+| **属性** | **是否必填** | **说明** |
+| --- | --- | --- |
+| timestamp | 是 | 日期的时间戳，可以直接使用日期组件。 |
+
+## 返回值
+
+| **返回值类型** | **说明** |
+| --- | --- |
+| timestamp | 所在年份首个日期的时间戳，可以直接赋值给日期组件。 |
+
+## 使用示例
+
+如下图所示，你可以使用`YEARBEGIN()`函数获取该所在年份的首个时间，即：`xxxx-01-01 00:00:00`。
+
+![[yida_support-wtwabe-cnzrgo-gvtpe4-dh7m8n-whagovdhgkyy0n4k_1703215368004-879b9c37-bcdc-4f0c-9355-0bbe9a47b063.png]]
+
+## 体验
+
+获取日期所在年份的首个日期，[点击体验效果](https://www.aliwork.com/o/sdwdswd?ddtab=true)。

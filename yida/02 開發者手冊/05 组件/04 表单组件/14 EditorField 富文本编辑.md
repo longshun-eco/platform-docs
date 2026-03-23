@@ -1,0 +1,171 @@
+---
+title: "EditorField 富文本编辑"
+source: "https://docs.aliwork.com/docs/developer/components/form/editorField"
+category: "開發者手冊 / 组件 / 表单组件"
+updated: 
+tags:
+  - yida
+  - 開發者手冊
+---
+## 何时使用
+
+-   当用户需要对文本进行复杂排版时使用；
+-   当用户需要进行图文混合展示时使用；
+
+## 组件示例
+
+## 组件属性
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+|
+behavior
+
+ | 表单组件显示状态 | [Behavior](/docs/components/interface#behavior) | 'NORMAL' |
+|
+
+config
+
+ | 通用配置 | object |
+```json
+{
+  "statusbar": false,
+  "menubar": false,
+  "toolbar1": "undo redo bold italic underline strikethrough | fontselect fontsizeselect forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table link image media upload | code | fullscreen | variable | removeformat",
+  "toolbar2": false,
+  "height": 300,
+  "fontsize_formats": "8px 10px 12px 14px 16px 18px 24px 36px 48px",
+  "visual": true,
+  "keep_values": false,
+  "forced_root_block": "div",
+  "plugins": [
+    "advlist autolink lists link image charmap print preview anchor",
+    "searchreplace visualblocks code fullscreen",
+    "insertdatetime media table contextmenu paste code",
+    "colorpicker",
+    "upload",
+    "placeholder",
+    "variable",
+    "noneditable"
+  ]
+}
+```
+ |
+|
+
+label
+
+ | 表单组件标题 | string |
+
+\-
+
+ |
+|
+
+labelAlign
+
+ | 表单组件标题的位置 | 'left' \| 'top' | 'top' |
+|
+
+labelColOffset
+
+ | 设置标题的偏移位置，配置值为栅格值，1代表1/24 | number | 0 |
+|
+
+labelColSpan
+
+ | 设置标题的占位宽度，配置值为栅格值，1代表1/24 | number | 4 |
+|
+
+labelTextAlign
+
+ | 表单组件的标题对齐方式 | 'left' \| 'right' | 'right' |
+|
+
+labelTipsIcon
+
+ | 表单组件标题提示信息入口图标，当labelTipsTypes取值为 **text** 或 **render** 时生效 | string |
+
+\-
+
+ |
+|
+
+labelTipsRender
+
+ | 表单组件标题提示信息自定义渲染方法，当labelTipsTypes取值为 **render** 时生效 | (props: IComponentProps) => ReactNode |
+
+\-
+
+ |
+|
+
+labelTipsText
+
+ | 表单组件标题提示文本信息，当labelTipsTypes取值为 **text** 时生效 | string |
+
+\-
+
+ |
+|
+
+labelTipsTypes
+
+ | 表单组件标题提示信息类型设置 | [LabelTipsTypes](/docs/components/interface#labelTipsTypes) | 'none' |
+|
+
+onChange
+
+ | onChange 值发生变化 | ({ value : string }) => void |
+
+\-
+
+ |
+|
+
+placeholder
+
+ | 占位提示 | string | '请输入' |
+|
+
+size
+
+ | 表单组件尺寸 | [Size](/docs/components/interface#size) | 'medium' |
+|
+
+tips
+
+ | 表单组件描述信息，展示在控件下方 | string |
+
+\-
+
+ |
+|
+
+uploadConfig
+
+ | 图片上传配置 | [UploadConfig](/docs/developer/components/interface#uploadconfig) | {} |
+|
+
+validation
+
+ | 表单组件校验设置，具体使用详见[表单校验文档](/docs/guide/concept/validation) | [Validation\[\]](/docs/components/interface#validation) | \[\] |
+|
+
+value
+
+ | 富文本默认值 | string |
+
+\-
+
+ |
+|
+
+wrapperColOffset
+
+ | 设置表单组件的偏移位置，设置值为栅格值，1代表1/24 | number | 0 |
+|
+
+wrapperColSpan
+
+ | 设置表单组件的占位宽度，设置值为栅格值，1代表1/24 | number | 0 |

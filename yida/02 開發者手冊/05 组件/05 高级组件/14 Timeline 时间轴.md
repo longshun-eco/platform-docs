@@ -1,0 +1,82 @@
+---
+title: "Timeline 时间轴"
+source: "https://docs.aliwork.com/docs/developer/components/advanced/timeLine"
+category: "開發者手冊 / 组件 / 高级组件"
+updated: 
+tags:
+  - yida
+  - 開發者手冊
+---
+垂直展示的时间流信息。
+
+## 何时使用
+
+-   当有一系列信息需要从上至下按时间排列时。
+-   需要有一条时间轴进行视觉上的串联时。
+
+## 组件示例
+
+## 组件属性
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+|
+animation
+
+ | 是否开启动画 | boolean | true |
+|
+
+dataSource
+
+ | 用于配置时间轴数据 | [TimelineDataSource\[\]](/docs/developer/components/interface#timelinedatasource) |
+```json
+[
+{
+  title: {
+    zh_CN: "春天",
+    en_US: "Spring",
+    type: "i18n",
+  },
+  time: "2021-03-10",
+},
+{
+  title: {
+    zh_CN: "夏天",
+    en_US: "Summer",
+    type: "i18n",
+  },
+  time: "2016-06-11",
+},
+{
+  title: {
+    zh_CN: "秋天",
+    en_US: "Autumn",
+    type: "i18n",
+  },
+  time: "2016-09-09",
+},
+{
+  title: {
+    zh_CN: "冬天",
+    en_US: "Winter",
+    type: "i18n",
+  },
+  time: "2016-12-08",
+},
+]
+```
+ |
+|
+
+fold
+
+ | 用于配置数据折叠 | any\[\] |
+```json
+[
+{
+  foldArea: [1, 2],
+  foldShow: false,
+},
+]
+```
+ |

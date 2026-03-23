@@ -1,0 +1,100 @@
+---
+title: "Agoal新增目标规则事件"
+source: "https://open.dingtalk.com/document/development/events-agoal-objectiverule-add"
+category: "事件订阅 / Agoal"
+updated: 
+tags:
+  - dingtalk
+  - 事件订阅
+---
+![[development-events-agoal-objectiverule-add_O1CN01Zx4PED22rkUkmRe1L_!!6000000007174-2-tps-226-40.png]]![[development-events-agoal-objectiverule-add_O1CN01UwOv1C27lrTuGFj2D_!!6000000007838-2-tps-17-30.png]]
+
+更新于 2025-11-28
+
+## 事件信息
+
+| 名称 | 值 |
+| --- | --- |
+| 中文名称 | Agoal新增目标规则事件 |
+| 英文名称 | agoal\_objectiveRule\_add |
+
+## 功能描述
+
+Agoal新增目标规则事件：当用户在Agoal中新增目标规则时，会发送事件通知订阅方目标规则的信息，主要是用来给三方合作伙伴使用，合作伙伴接收事件以同步新增目标规则相关信息。
+
+## 支持应用类型
+
+| 应用类型 | Stream模式推送 | HTTP推送 | SyncHTTP/RDS推送 |
+| --- | --- | --- | --- |
+| 企业内部应用 | 支持 | 支持 | 不支持 |
+| 第三方企业应用 | 支持 | 不支持 | 支持 |
+
+## 事件体描述
+
+Stream模式推送
+
+| 名称 | 类型 | 示例值 | 描述 |
+| --- | --- | --- | --- |
+| eventUnifiedAppId | String | bbb381b6-f01xxxxx58daac | 统一应用身份Id。 |
+| eventCorpId | String | ding9f50b15bxxxx16741 | 事件所属的corpId。 |
+| eventType | String | agoal\_objectiveRule\_add | 事件类型。 |
+| eventId | String | c7c7120f2c07419\*\*ebdba0318c8 | 事件的唯一Id。 |
+| eventBornTime | Long | 1683533823336 | 事件生成时间。 |
+| data | Object |  | 事件体data。 |
+
+### **事件体示例**
+
+```
+{
+```
+
+HTTP推送
+
+| 名称 | 类型 | 示例值 | 描述 |
+| --- | --- | --- | --- |
+| EventType | String | agoal\_objectiveRule\_add | 事件英文名称。 |
+| EventTime | Long | 1663143335567 | 事件发生的时间。 |
+| CorpId | String | ding9f50b15bxxxx16741 | 企业corpId。 |
+| BizId | String | 1663\*\*35567 | 无业务意义，幂等。 |
+| eventId | String | c7c7120f2c07419\*\*ebdba0318c8 | 事件的唯一Id。 |
+| corpid | String | ding23980uodfijladkfja | 钉钉组织ID |
+| bizid | String | djk23894jfkleuid8djf | 业务执行trace id |
+| eventTime | String | 1774522643 | 事件发生时的时间戳 |
+| body | Object |  |  |
+
+### **事件体示例**
+
+```
+{
+```
+
+SyncHTTP/RDS推送
+
+为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+| 名称 | 类型 | 示例值 | 描述 |
+| --- | --- | --- | --- |
+| corp\_id | String | ding9f50b15bxxxx16741 | 企业corp\_id。 |
+| biz\_id | String | 1663\*\*35567 | biz\_id无业务意义，幂等。 |
+| biz\_type | Integer | 458 | 事件bizType。 |
+| biz\_data | Object |  | 事件bizData介绍。 |
+
+### **biz\_data数据示例(biz\_type=458)**
+
+```json
+{
+  "corp_id": "ding9f50b15bxxxx16741",
+  "biz_id": "1663**35567",
+  "biz_type": 458,
+  "biz_data": {
+    "eventId": "c7c7120f2c07419**ebdba0318c8",
+    "corpid": "ding23980uodfijladkfja",
+    "syncAction": "agoal_objectiveRule_add",
+    "bizid": "djk23894jfkleuid8djf",
+    "eventTime": "1774522643",
+    "body": {
+      "objectiveRuleId": "68c8fxxxe4b0beb9547f45a4"
+    }
+  }
+}
+```

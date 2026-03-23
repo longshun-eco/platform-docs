@@ -1,0 +1,148 @@
+---
+title: "Search 搜索"
+source: "https://docs.aliwork.com/docs/developer/components/advanced/search"
+category: "開發者手冊 / 组件 / 高级组件"
+updated: 
+tags:
+  - yida
+  - 開發者手冊
+---
+## 何时使用
+
+-   页面、表单数据搜索时使用。
+
+## 组件示例
+
+## 组件属性
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+|
+autoFocus
+
+ | 是否自动聚焦 | boolean | false |
+|
+
+dataSource
+
+ | 设置搜索框的下拉列表值 | [SearchDataSource\[\]](/docs/developer/components/interface#searchdatasource) |
+```json
+[
+{
+  "label": "天猫",
+  "value": "value1"
+},
+{
+  "label": "淘宝",
+  "value": "value2"
+},
+{
+  "label": "阿里巴巴",
+  "value": "value3"
+}
+]
+```
+ |
+|
+
+defaultFilterValue
+
+ | 开启选择器按钮后，设置选择器默认值 | string | 'one' |
+|
+
+defaultValue
+
+ | 搜索框默认值 | string |
+
+\-
+
+ |
+|
+
+disabled
+
+ | 是否禁用 | boolean | false |
+|
+
+filter
+
+ | 设置选择器的下拉列表值 | [SearchDataSource\[\]](/docs/developer/components/interface#searchdatasource) |
+```json
+[
+{
+  "label": "one",
+  "value": "one"
+},
+{
+  "label": "two",
+  "value": "two"
+},
+{
+  "label": "three",
+  "value": "three"
+}
+]
+```
+ |
+|
+
+hasClear
+
+ | 是否显示清除按钮 | boolean | false |
+|
+
+isFilter
+
+ | 是否开启选择器 | boolean | false |
+|
+
+onChange
+
+ | 组件值发生改变事件 | (value: string) => void |
+
+\-
+
+ |
+|
+
+onFilterChange
+
+ | 选择器发生变化时的事件 | (filterValue: string) => void |
+
+\-
+
+ |
+|
+
+onSearch
+
+ | 点击搜索按钮触发的事件 | (value: string) => void |
+
+\-
+
+ |
+|
+
+placeholder
+
+ | 搜索框默认提示 | string | '请输入' |
+|
+
+searchText
+
+ | 搜索按钮内容 | string | '搜索' |
+|
+
+shape
+
+ | 搜索形状 | 'normal' | 'simple' | 'normal' |
+|
+
+size
+
+ | 尺寸 | 'medium' | 'large' | 'medium' |
+|
+
+type
+
+ | 搜索类型 | 'normal' | 'primary' | 'secondary' | 'dark' | 'normal' |

@@ -1,0 +1,167 @@
+---
+title: "获取企业DING发送统计数据新版SDK"
+source: "https://open.dingtalk.com/document/development/obtain-sending-statistics-of-an-enterprise-ding"
+category: "服务端API / 历史文档（不推荐） / 数据目录"
+updated: 
+tags:
+  - dingtalk
+  - 服务端API
+---
+![[development-obtain-sending-statistics-of-an-enterprise-ding_O1CN01Zx4PED22rkUkmRe1L_!!6000000007174-2-tps-226-40.png]]![[development-obtain-sending-statistics-of-an-enterprise-ding_O1CN01UwOv1C27lrTuGFj2D_!!6000000007838-2-tps-17-30.png]]
+
+更新于 2025-09-08调用本接口获取企业DING发送的统计数据。
+
+**重要**
+
+1. 为了更好支持组织对钉钉数据分析和管理的需求，钉钉数据资产平台将统一所有数据资产相关的产品和服务，从数据层、功能层、业务层做升级，提供更好的服务体验。为此，我们将数据资产类 OpenAPI 接口的使用路径和产品定位做了调整，本开发者文档中所述 OpenAPI 接口及 60 个其他的[数据资产类OpenAPI](https://open.dingtalk.com/document/dataservice/data-asset-interface-adjustment-description)接口，已于 2023 年 9 月 1 日**关闭开发者后台应用开发的权限申请入口**，客户可以通过[钉钉数据资产平台](https://open.dingtalk.com/document/dataservice/overview)获取相应的数据服务。
+2. 本文档已于 2023 年 9 月 1 日迁移至历史文档（不推荐）目录，且本接口仅保持现有功能，不再新增支持其他能力，说明如下：
+
+   * 如果未使用本接口，推荐使用[钉钉数据资产平台](https://open.dingtalk.com/document/dataservice/overview)。
+   * 如果已使用本接口，建议您根据自身实际情况评估是否切换至[钉钉数据资产平台](https://open.dingtalk.com/document/dataservice/overview)。
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 统计日期 | 组织ID | 发送DING次数 | 发送应用DING次数 | 发送短信DING次数 | 发送电话DING次数 | 发送DING人数 | 发送应用DING人数 | 发送短信DING人数 | 发送电话DING人数 |
+| 20210101 | 12345 | 33 | 30 | 1 | 2 | 25 | 23 | 1 | 2 |
+
+## 权限
+
+要调用此API，需要以下权限之一。
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| 应用类型 | 是否支持 | 权限 | API Explorer调试 |
+| 企业内部应用 | 支持 | 数据服务目录DING统计读权限 | **重要**  暂不支持新增申请。 |
+| 第三方企业应用 | 暂不支持 | 数据服务目录DING统计读权限 | 暂不支持 |
+| 第三方个人应用 | 暂不支持 | 数据服务目录DING统计读权限 | 暂不支持 |
+
+## 请求方法
+
+```
+GET /v1.0/datacenter/dingSendData?statDate=String HTTP/1.1
+Host:api.dingtalk.com
+x-acs-dingtalk-access-token:String
+Content-Type:application/json
+```
+
+## Header参数
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| 名称 | 类型 | 是否必填 | 描述 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证：   * 企业内部应用调用[获取企业内部应用的accessToken](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-an-internal-app)获取。 |
+
+## Query参数
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| 名称 | 类型 | 是否必填 | 描述 |
+| statDate | String | 是 | 查询时间，日期格式为yyyyMMdd。 |
+
+## 返回参数
+
+|  |  |  |
+| --- | --- | --- |
+| 名称 | 类型 | 描述 |
+| dataList | Array of Object | 指标数据列表。  **说明**  指标数据为Map类型，指标值的取值key为**指标ID\_指标周期**，例如：4001\_DAY。 |
+| metaList | Array | 指标元数据列表，包括指标ID、指标名称、指标周期、指标口径等信息。 |
+| kpiId | String | 字段ID。 |
+| kpiName | String | 字段名称。 |
+| unit | String | 字段单位。 |
+| kpiCaliber | String | 指标描述。 |
+| period | String | 字段统计周期。 |
+
+## 示例
+
+**请求示例**
+
+HTTP
+
+```
+GET /v1.0/datacenter/dingSendData?statDate=20210620 HTTP/1.1
+Host:api.dingtalk.com
+x-acs-dingtalk-access-token:85ddxxx
+Content-Type:application/json
+```
+
+Java
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+```
+
+Python
+
+```
+# -*- coding: utf-8 -*-
+```
+
+PHP
+
+```
+php</code
+```
+
+Go
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+```
+
+Node.js
+
+```
+// This file is auto-generated, don't edit it
+```
+
+C#
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+```
+
+C++
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+```
+
+**返回示例**
+
+```
+HTTP/1.1 200 OK
+Content-Type:application/json
+
+{
+  "metaList" : [ {
+    "unit" : "次",
+    "period" : "DAY",
+    "kpiId" : "4036",
+    "kpiCaliber" : "发送DING次数",
+    "kpiName" : "发送DING次数"
+  }, {
+    "unit" : "人",
+    "period" : "DAY",
+    "kpiId" : "4037",
+    "kpiCaliber" : "发送DING用户数",
+    "kpiName" : "发送DING人数"
+  }, {
+    "unit" : "次",
+    "period" : "DAY",
+    "kpiId" : "4038",
+    "kpiCaliber" : "发送应用类型DING次数",
+```
+
+## 错误码
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| HttpCode | 错误码 | 错误信息 | 说明 |
+| 400 | IdempotentParameterMismatch | The request uses the same client token as a previous, but non-identical request. Do not reuse a client token with different requests, unless the requests are identical. | client token不合法。 |
+| 500 | statDate.is.null | statDate请求参数为空 | statDate请求参数为空 |
+| 500 | service.meta.isNull | service meta信息为空 | service meta信息为空 |
+| 500 | serviceId.is.null | serviceId为空 | serviceId为空 |
+| 500 | systemError | 系统异常 | 系统异常，请稍后重试 |
+| 500 | orgId.is.null | orgId请求参数为空 | orgId请求参数为空 |
+| 500 | statDate.format.iserror | statDate请求参数格式不正确，正确格式：yyyyMMdd | statDate请求参数格式不正确，正确格式：yyyyMMdd |
+| 500 | unknownError | 未知错误 | 未知错误 |

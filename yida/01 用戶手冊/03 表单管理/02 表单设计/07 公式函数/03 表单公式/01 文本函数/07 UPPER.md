@@ -1,0 +1,52 @@
+---
+title: "UPPER"
+source: "https://docs.aliwork.com/docs/yida_support/wtwabe/cnzrgo/gvtpe4/wcguece1v2ok8b00/fm0og6ccdh0n0q2k"
+category: "用戶手冊 / 表单管理 / 表单设计 / 公式函数 / 表单公式 / 文本函数"
+updated: 
+tags:
+  - yida
+  - 用戶手冊
+---
+
+UPPER 函数用于文本中的小字母转换为大写字母。
+
+## 支持产品场景
+
+UPPER函数支持在宜搭的以下场景中使用。
+
+-   表单（主表字段）
+-   表单（业务关联规则）
+-   表单（校验）
+-   流程设计（校验规则）
+-   流程设计（关联操作）
+-   集成自动化
+-   流程-节点
+-   连接器
+
+## 格式
+
+```
+UPPER(text)
+```
+
+## 属性说明
+
+| **属性** | **是否必填** | **说明** |
+| --- | --- | --- |
+| text | 是 | 需要转换的文本内容。 |
+
+## 返回值
+
+| **返回值类型** | **说明** |
+| --- | --- |
+| 文本 | 转换完成后的文本内容 |
+
+## 使用示例
+
+下图中公式的执行结果为：`YIDA低代码`。
+
+![[yida_support-wtwabe-cnzrgo-gvtpe4-wcguece1v2ok8b00-fm0og6ccdh0n0q2k_1702878346225-4ac6597d-f18f-40ba-99b7-ba10b7f308f8.png]]
+
+## 体验
+
+将**单行输入框**组件的小写字母转换成大写字母，[**点击体验效果**](https://www.aliwork.com/o/swwdwd?ddtab=true)。
